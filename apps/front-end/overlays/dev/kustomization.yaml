@@ -7,7 +7,7 @@ resources:
 
 images:
   - name: nginx
-    newTag: "1.23.6"
+    newTag: "1.21.6"
 
 configMapGenerator:
   - name: app-config

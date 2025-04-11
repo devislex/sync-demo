@@ -2,9 +2,9 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 namespace: qa
 resources:
-  - ../../base
-patchesStrategicMerge:
-  - ingress-patch.yaml
+- ../../base
 images:
-  - name: nginx
-    newTag: "1.23.3"
+- name: nginx
+  newTag: 1.23.3
+patches:
+- path: ingress-patch.yaml

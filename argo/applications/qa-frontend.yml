@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/your-org/gitops-repo
+    repoURL: https://github.com/devislex/sync-demo.git
     targetRevision: HEAD
     path: apps/front-end/overlays/qa
   destination:

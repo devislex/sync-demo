@@ -11,7 +11,7 @@ spec:
     path: apps/front-end/overlays/qa
   destination:
     server: https://kubernetes.default.svc
-    namespace: qa
+    namespace: frontend-qa
   syncPolicy:
     automated:
       prune: true

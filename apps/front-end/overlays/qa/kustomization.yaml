@@ -1,12 +1,22 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
-namespace: qa
+namespace: frontend-qa
 resources:
   - ../../base
+  - namespace.yaml
 
 images:
   - name: nginx
-    newTag: "1.23.3"
+    newTag: "1.21.6"
+
+configMapGenerator:
+  - name: app-config
+    envs:
+      - configmap.env
+
+namePrefix: qa-
+commonLabels:
+  env: qa
 
 patches:
   - path: ingress-patch.yaml

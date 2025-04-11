@@ -3,7 +3,8 @@ kind: Kustomization
 namespace: qa
 resources:
   - ../../base
-
+patchesStrategicMerge:
+  - ingress-patch.yaml
 images:
   - name: nginx
     newTag: "1.23.3"
